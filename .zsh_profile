@@ -1,0 +1,12 @@
+export XDG_CONFIG_HOME=$HOME/.config
+
+export TERMINAL="/usr/bin/alacritty"
+VIM="nvim"
+
+# set Personal and loop env for source alias and env other files.
+PERSONAL=$XDG_CONFIG_HOME/personal
+source $PERSONAL/env
+for i in `find -L $PERSONAL`; do
+  #echo $i
+  source $i
+done
