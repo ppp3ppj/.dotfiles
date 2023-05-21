@@ -22,3 +22,4 @@ alias lt='exa --tree --level=2'
 
 # for rust practice 101
 alias practice_rust="cd /mnt/choerry/practices/rust/"
+alias psql_101db="psql -U pppwy -W -d practice_db" 
