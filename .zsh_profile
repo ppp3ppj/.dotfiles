@@ -10,3 +10,14 @@ for i in `find -L $PERSONAL`; do
   #echo $i
   source $i
 done
+
+# Dev Ruby and nvm
+eval "$(~/.rbenv/bin/rbenv init - zsh)"
+export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+#psql rails
+export PATH=$PATH:/usr/pgsql-15/bin:$PATH
